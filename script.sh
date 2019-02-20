@@ -1,5 +1,6 @@
 #!/bin/bash
 
+echo -e "SCRIPT INFO"
 pid=$$
 script_name=$0
 user_name=$USER
@@ -15,8 +16,13 @@ total_params=$#
 first_param=$1
 all_params=$@
 
+echo -e "\nPARAMS INFO"
 echo "I got $total_params params in the script"
 echo "First parameter in the script is $first_param"
 echo "Raw params are '$all_params'"
 
-ls -lart
+echo -e "\nBREAKING PARAMS"
+for param in $all_params
+do
+    echo $param
+done 
