@@ -1,3 +1,6 @@
 #!/bin/bash
+say() {
+    echo "Hello  World!"
+}
 
-echo "Hello  World!"
+say
