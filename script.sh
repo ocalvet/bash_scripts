@@ -6,11 +6,20 @@ script_name=$0
 user_name=$USER
 echo "Hello $user_name. You are running '$script_name' with pid '$pid'"
 
-say() {
-    echo "Hello  World!"
+echo -e "\nFUNCTIONS"
+
+func() {
+    echo "Simple function without params"
 }
 
-say
+func
+
+
+with_params() {
+    echo "Params $1" 
+}
+
+with_params 123
 
 total_params=$#
 first_param=$1
