@@ -16,7 +16,7 @@ func
 
 
 with_params() {
-    echo "Params $1" 
+    echo "Calling function with params $1" 
 }
 
 with_params 123
