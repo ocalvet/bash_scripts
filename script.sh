@@ -44,3 +44,12 @@ for param in $all_params
 do
     echo $param
 done 
+
+
+echo -e "\nWHILE LOOP"
+counter=1
+while [ $counter -le 10 ]
+do
+    echo $counter
+    ((counter++))
+done
