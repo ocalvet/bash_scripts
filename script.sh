@@ -57,11 +57,11 @@ done
 echo -e "\nMENU"
 names='Kyle Cartman Stan Quit'
 PS3='Select character: '
-select name in $names
+select idx in $names
 do
-    if [[ $name == 'Quit' ]]
+    if [[ $idx == 'Quit' ]]
     then
         break
     fi
-    echo Hello $name
+    echo Hello $idx
 done
