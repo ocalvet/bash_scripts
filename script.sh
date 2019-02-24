@@ -79,3 +79,9 @@ tput bold
 echo $message
 tput sgr0
 tput cup $( tput lines ) 0
+
+
+read -p 'Username: ' uservar
+read -sp 'Password: ' passvar
+echo
+echo Thankyou $uservar we now have your login details 
