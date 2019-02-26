@@ -1,3 +1,3 @@
 # Bash Scripting Examples
 
-This project is to explore different basj scripting concepts
+This project is to explore different bash scripting concepts
