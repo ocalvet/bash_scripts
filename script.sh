@@ -1,18 +1,24 @@
 #!/bin/bash
 
 # Print something to the screen
-echo -e "SCRIPT INFO"
+echo "SCRIPT INFO"
+# add -e to enable line breaks and tabs
+echo -e "\tHello there\nWhat"
+
 # Get process id
 pid=$$
+
 # Get the name of the script
 script_name=$0
+
 # What user is running this script
 user_name=$USER
+or_user=$(whoim)
 
-echo "Hello $user_name. You are running '$script_name' with pid '$pid'"
+echo "Hello $user_name. You are running '$script_name' with pid '$pid', and whoim=$or_user"
 
+# Functions are just a way to group commands into a command - function name
 echo -e "\nFUNCTIONS"
-
 # Function declaration
 func() {
     echo "Simple function without params"
@@ -26,6 +32,7 @@ with_params() {
     echo "Calling function with params $1" 
 }
 
+# Pass parameters to a function separated by space just like in the terminal
 with_params 123
 
 # Get parameter information
@@ -44,7 +51,6 @@ for param in $all_params
 do
     echo $param
 done 
-
 
 echo -e "\nWHILE LOOP"
 counter=1
@@ -66,6 +72,7 @@ do
     echo Hello $idx
 done
 
+# Terminal manipulation
 cols=$( tput cols )
 rows=$( tput lines )
 message="HELLO WORLD!"
@@ -80,7 +87,7 @@ echo $message
 tput sgr0
 tput cup $( tput lines ) 0
 
-
+# Read input from terminal
 read -p 'Username: ' uservar
 read -sp 'Password: ' passvar
 echo
