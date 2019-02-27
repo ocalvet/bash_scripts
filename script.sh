@@ -98,3 +98,8 @@ if [ $passvar = "pass123" ]; then
 else
     echo "Wrong password"
 fi
+
+echo -e '\nArithmetic Operations'
+
+sum=$(( 4 + 6 + 3))
+echo "SUM=$sum"
