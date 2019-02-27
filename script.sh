@@ -102,4 +102,7 @@ fi
 echo -e '\nArithmetic Operations'
 
 sum=$(( 4 + 6 + 3))
-echo "SUM=$sum"
+echo "sum=$sum"
+
+mult=$(( 4 * 3 ))
+echo "multiplication=$mult"
